@@ -1,3 +1,2 @@
-include ':happy-toast'
 include ':app'
 rootProject.name = "Private Maven Repository"

@@ -16,6 +16,15 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //Using library from remote
+        maven {
+            //change your URL with local host.
+            url "http://localhost:8081/artifactory/mobile-sdk-releases"
+            credentials {
+                username = "${artifactory_username}"
+                password = "${artifactory_password}"
+            }
+        }
     }
 }
 
