@@ -1,0 +1,41 @@
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+
+//Change your Server URL here, In my case it is localhost
+def serverUrl = 'localhost'
+def libraryGroupId = 'com.androchef'
+def libraryArtifactId = 'happy-toast'
+def libraryVersion = '1.0.0'
+def mobileSdkReleaseRepoKey = 'mobile-sdk-releases'
+
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId libraryGroupId
+            version libraryVersion
+            artifactId libraryArtifactId
+
+            artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
+        }
+    }
+}
+
+artifactory {
+    contextUrl = "http://$serverUrl:8081/artifactory"
+    publish {
+        repository {
+            repoKey = mobileSdkReleaseRepoKey
+            username = artifactory_username
+            password = artifactory_password
+        }
+        defaults {
+            publications('aar')
+            publishArtifacts = true
+
+            properties = ['qa.level': 'basic', 'q.os': 'android', 'dev.team': 'core']
+            publishPom = true
+        }
+    }
+}
