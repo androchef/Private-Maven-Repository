@@ -9,10 +9,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/showing_toast_from_private_maven_library"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowShortToast"
+        app:layout_constraintEnd_toEndOf="@+id/btnShowShortToast"
+        app:layout_constraintStart_toStartOf="@+id/btnShowShortToast"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnShowLongToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_short_toast"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowShortToast" />
+
+    <Button
+        android:id="@+id/btnShowShortToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_long_toast"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowLongToast"
+        app:layout_constraintEnd_toEndOf="@+id/btnShowLongToast"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnShowLongToast"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
