@@ -8,16 +8,17 @@
 ![Github Followers](https://img.shields.io/github/followers/happysingh23828?label=Follow&style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/happysingh23828?label=Follow&style=social)
 
-This is a sample Android application 📱 built to demonstrate use of *Hosting and using private libraries* . Dedicated to all Developers with ❤️.
+This is a sample Android application 📱 built to demonstrate use of *hosting and using private libraries* . Dedicated to all Developers with ❤️.
 
 ## - How to build on your environment
+I have installed artifactory at my local environment (Linux Mint).
+```xml
+wget https://bintray.com/artifact/download/jfrog/artifactory-debs/pool/main/j/jfrog-artifactory-oss-deb/jfrog-artifactory-oss-6.20.0.deb
+```
+
 Follow this blog to setup *Artifactory* post tutorial https://inthecheesefactory.com/blog/how-to-setup-private-maven-repository/en
 
-
-### What is clean architecture?
-Architecture means the overall design of the project. It's the organization of the code into classes or files or components or modules. And it's how all these groups of code relate to each other. The architecture defines where the application performs its core functionality and how that functionality interacts with things like the database and the user interface.
-
-## - Follow this blog post to Set up private repo.
+## - Follow this blog post to set up private repo.
 https://inthecheesefactory.com/blog/how-to-setup-private-maven-repository/en
 
 ## - Thanks
